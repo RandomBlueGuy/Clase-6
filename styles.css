@@ -1,10 +1,166 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 :root {
-    --color-name: ;
+    --Soft-blue: hsl(215, 51%, 70%);   
+    --Cyan: hsl(178, 100%, 50%);
+    --VDB-bg: hsl(217, 54%, 11%);
+    --VDB-card: hsl(216, 50%, 16%);
+    --VDB-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
     padding: 0;
     margin: 0;
-    background-color: black;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
 }
+
+a {
+    color:var(--White);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--Cyan);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height:100%;
+    background-color: var(--VDB-bg);
+    color: var(--White);   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: var(--VDB-card);
+    border-radius: 1rem;
+    box-shadow: 5px 10px 20px rgba(0,0,0, 0.4);
+}
+
+.img-header {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    margin: 5%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px rgba(0,0,0, 0.4);
+}
+
+    .img-header img{
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 0.5rem;
+        
+    }
+
+        .img-header img:hover {
+            opacity: 50%;
+        }
+
+        .img-header:hover {
+            background-color: var(--Cyan);
+        }
+
+        .eye-hover {
+            position: absolute;
+            display: none;
+        }
+
+            .img-header img:hover + .eye-hover{
+                position: absolute;
+                display:block;
+            }
+
+.nft-description {
+    width: 90%;
+}
+
+    .nft-description h1 {
+        line-height: 0;
+        margin-bottom: 2rem;
+        font-size: 24px;
+        font-weight: vold;
+    }
+
+    h1:hover {
+        color: var(--Cyan);
+    }
+
+     .description {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        color: var(--Soft-blue);
+
+    }
+
+.plus-data {
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    color: var(--Cyan);
+    font-size: 16px;
+}
+
+.prime {
+    width: 100%;
+    font-weight: 600; 
+}
+
+.prime:before{
+    content: url("Resources/icon-ethereum.svg");
+    vertical-align:middle;
+}
+
+.sub{
+    width: 100%;
+    text-align: right;
+    font-weight: 400;
+    color: var(--Soft-blue);
+}
+
+.sub:before{
+    content: url("Resources/icon-clock.svg");
+    vertical-align:middle;
+}
+
+.author{
+    width: 90%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--VDB-line);
+
+}
+
+    .author img{       
+        width: 10%;
+        border: 2px solid var(--White);
+        border-radius: 50%;
+    }
+
+    .author p{
+        padding-left: 1rem;
+        color: var(--Soft-blue);
+        font-size: 90%;
+    }
